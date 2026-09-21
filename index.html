@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores Amarillas para tu</title>
+    <title>Flores Amarillas para ti</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        #contenido {
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        #boton {
+            font-size: 40px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <div id="contenido">
+        <button id="boton">DA CLICK</button>
+    </div>
+
+    <script>
+        document.body.addEventListener("click", function() {
+
+            document.getElementById("contenido").innerHTML = `
+                <p>quiza no es real, pero si es para ti</p>
+                <p>para que te des un viajezote sin periquearte, ILY</p>
+            `;
+
+            setTimeout(function() {
+                window.location.href = "VFAG.html";
+            }, 5000);
+
+        }, { once: true });
+    </script>
+
 </body>
 </html>
